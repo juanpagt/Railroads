@@ -15,8 +15,15 @@ class CreateNameCarsTable extends Migration
     {
         Schema::create('name_cars', function (Blueprint $table) {
             $table->id();
-
-            $table -> string('name_car');
+            $table->string('nombre');
+            $table->foreignId('destinations_id')
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->foreignId('receivers_id')
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
 
             $table->timestamps();
         });

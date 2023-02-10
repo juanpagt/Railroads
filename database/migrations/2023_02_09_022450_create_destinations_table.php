@@ -16,13 +16,13 @@ class CreateDestinationsTable extends Migration
         Schema::create('destinations', function (Blueprint $table) {
             $table->id();
 
-           $table-> integer('clasification_id');
-
-            $table -> string('city_name');
+            $table->id();
+            $table->integer('classification');
+            $table->string('city');
 
             $table->timestamps();
 
-           // $table->foreign('clasification_id')->references('id')->on('destinations');
+
 
         });
     }

@@ -15,10 +15,7 @@ class CreateReceiversTable extends Migration
     {
         Schema::create('receivers', function (Blueprint $table) {
             $table->id();
-
-
-
-            $table -> string('name_track');
+            $table->string('nombre');
 
             $table->timestamps();
 

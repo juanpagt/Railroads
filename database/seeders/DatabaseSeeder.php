@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //seeder para rellenar de datos de prueba
        User::factory(1)->create();
        NameCar::factory(6)->create();
        Destination::factory(3)->create();
